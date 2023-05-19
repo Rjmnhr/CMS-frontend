@@ -36,12 +36,12 @@
    border-left: 1px solid gray;
    margin-top:20px ;
    text-align: justify;
-   height: 100vh;
+   max-height: 100vh;
    overflow-y: auto;
   
 }
 
-.read-more-container h1{
+.read-more-container h1 ,.read-more-container p{
   display: flex;
   justify-content: center;
 }
@@ -126,6 +126,7 @@ text-decoration: underline;
   }
   .read-more-container{
     width: 100%;
+    border-left: none;
   }
   .quote-container{
     height: 101vh;

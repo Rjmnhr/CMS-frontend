@@ -7,6 +7,8 @@ export const Header = () => {
   const signOut = () => {
     localStorage.setItem("accessToken", "");
     localStorage.setItem("userData", "");
+    localStorage.setItem("userID", "");
+    localStorage.setItem("isAdmin", "");
 
     navigate("/");
   };
