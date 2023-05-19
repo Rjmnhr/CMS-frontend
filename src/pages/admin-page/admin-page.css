@@ -1,0 +1,24 @@
+    .admin-container{
+        background-color: black;
+        color: white;
+        width: 100%;
+    }
+    .admin-sub-container{
+        display: flex;
+    }
+    .user-view{
+margin-left: 10%;
+margin-top: 80px;
+    }
+   
+    @media (max-width: 768px) {
+        .admin-sub-container{
+            display: flex;
+            flex-direction: column;
+        }
+        .user-view{
+            margin-left: 0;
+            margin-top: 30px;
+                }
+               
+    }

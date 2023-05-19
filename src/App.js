@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import { AppContextProvider } from "./context/app-context";
+import ContentData from "./data/content-data/content-data";
+import { FeaturedData } from "./data/featured-data/featured-data";
+import AppRouter from "./routes/app-router";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <AppContextProvider>
+          <FeaturedData />
+          <ContentData />
+          <AppRouter />
+        </AppContextProvider>
+      </div>
     </div>
   );
 }

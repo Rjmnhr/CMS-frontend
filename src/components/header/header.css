@@ -1,0 +1,57 @@
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-bottom: 1px solid gray;
+    background-color: black;
+    color:white;
+    position:fixed;
+    width: 96%;
+
+}
+.header-container h3,p{
+    margin: 0;
+    padding: 0;
+}
+
+.right-end{
+    display: flex;
+    justify-content: space-around;
+   gap: 20px;
+    align-items: center;
+   
+    
+}
+.avatar-head{
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+ 
+  
+}
+.profile{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+  @media (max-width: 768px) {
+.header-container{
+    width: 98%;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+.avatar-head{
+    width: 25px;
+    height: 25px;
+}
+.right-end{
+    gap: 10px   ;
+}
+}

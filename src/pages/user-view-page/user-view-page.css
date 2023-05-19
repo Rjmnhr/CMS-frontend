@@ -1,0 +1,137 @@
+.view-container{
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+    min-height: 100vh;
+
+}
+.featured-content-container{
+    display: flex;
+    border-bottom:1px solid gray ;
+    
+}
+.quote-container{
+    display: grid;
+    place-items: center;
+    height: 90vh;
+    margin: 0;
+    background-position: center;
+    background-blend-mode: color;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.quote-content{
+   width: 50%;
+}
+.quote-content h1{
+    font-size: 60px;
+}
+
+
+.read-more-container{
+    width: 40%;
+    padding: 15px;
+   border-left: 1px solid gray;
+   margin-top:20px ;
+   text-align: justify;
+   height: 100vh;
+   overflow-y: auto;
+  
+}
+
+.read-more-container h1{
+  display: flex;
+  justify-content: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    margin: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    width: 60%;
+    overflow-y:auto ;
+    height: 100vh;
+    
+  }
+  .sub-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: start;
+    padding: 8px;
+    gap: 10px;
+    color: gainsboro;
+  }
+  
+  .grid-item {
+    background-color:   rgb(34, 34, 34);
+    height: 360px;
+    /* padding: 20px; */
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+  
+  a {
+    display: inline-block;
+    margin-top: 20px;
+  }
+
+  .section-title{
+    display: inline-flex;
+    justify-content: center;
+    border-bottom: 1px solid gray;
+    width: 80%;
+    padding: 20px;
+    margin: 0;
+    margin-top: 30px;
+  }
+
+  .read-more-btn:hover{
+cursor: pointer;
+text-decoration: underline;
+
+
+  }
+
+  .read-more-btn:active{
+ 
+    transform: translateY(1px);
+  }
+
+ 
+  @media (max-width: 768px) {
+    .quote-content h1{
+      font-size: 34px;
+      padding: 0;
+     
+     
+  }
+  .featured-content-container{
+        flex-direction: column;
+  }
+  .grid-container{
+    width: 100%;
+  }
+  .read-more-container{
+    width: 100%;
+  }
+  .quote-container{
+    height: 101vh;
+    text-align: center;
+   
+    width: 107%;
+  }
+
+  }

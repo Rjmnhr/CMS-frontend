@@ -1,0 +1,72 @@
+
+
+
+.add-content-form{
+    padding: 10px;
+    margin: 10px;
+    display: grid;
+    place-items: center;
+    gap: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.detail-inputs
+{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    
+}
+.detail-inputs label{
+    padding-left: 5px;
+}
+
+.add-content-form input , .add-content-form textarea{
+    padding: 10px;
+    margin: 5px;
+    border-style: none;
+    border-radius: 10px;
+    outline: none;
+    background-color: rgb(176, 176, 176);
+ 
+}
+
+.add-content-form input{
+    width: 90%;
+    height: 20px;
+}
+
+.add-content-form button{
+    margin-top: 20px;
+    padding: 10px;
+   border-radius: 5px;
+    background-color: rgb(117, 117, 193);
+    color: black    ;
+    border-style: none;
+    width: 100px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    margin-left: 38%;
+   
+
+}
+.add-content-form textarea{
+   height: 250px;
+   width: 360px; 
+}
+
+@media (max-width: 768px) {
+    .add-content-form input{
+        width: 90%;
+        height: 20px;
+    }
+    .add-content-form textarea{
+        height: 250px;
+        width: 90%; 
+     }
+}
+
+
+
