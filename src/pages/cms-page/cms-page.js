@@ -8,7 +8,7 @@ const CmsPage = () => {
   const deleteContent = (id) => {
     console.log(id);
     axios
-      .delete(`http://localhost:8002/api/content/delete/${id}`)
+      .delete(`https://backendcms-renjithcmrenju.b4a.run/api/content/delete/${id}`)
       .then((response) => {
         console.log("response", response.data);
       })
