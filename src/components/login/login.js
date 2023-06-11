@@ -13,17 +13,6 @@ export const Login = () => {
 
   const navigate = useNavigate();
 
-  useEffect(() => {
-    let timeoutId;
-    if (isLoading) {
-      timeoutId = setTimeout(() => {
-        setIsLoading(false);
-        error("Check your internet connection");
-      }, 15000);
-    }
-    return () => clearTimeout(timeoutId);
-  }, [isLoading]);
-
   const handleSubmit = (e) => {
     setIsLoading(true);
     e.preventDefault();
@@ -86,6 +75,18 @@ export const Login = () => {
       content: "Login successfully",
     });
   };
+
+  useEffect(() => {
+    let timeoutId;
+    if (isLoading) {
+      timeoutId = setTimeout(() => {
+        setIsLoading(false);
+        error("Check your internet connection");
+      }, 15000);
+    }
+    return () => clearTimeout(timeoutId);
+    // eslint-disable-next-line
+  }, [isLoading]);
 
   return (
     <>
