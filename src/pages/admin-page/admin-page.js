@@ -17,7 +17,7 @@ export const AdminPage = () => {
             <div style={{ marginTop: "80px" }}>
               <SideBar />
             </div>
-            <div className="user-view">
+            <div style={{ marginTop: "35px" }} className="user-view">
               <UserViewPage />
             </div>
           </div>

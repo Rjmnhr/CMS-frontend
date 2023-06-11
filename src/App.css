@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: black;
+
 }
 .container{
   margin: 0;
@@ -39,7 +39,7 @@
   color: white;
 }
 
-.App-link {
+.App-link { 
   color: #61dafb;
 }
 

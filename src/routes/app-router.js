@@ -6,6 +6,7 @@ import { UserViewPage } from "../pages/user-view-page/user-view-page";
 import { AdminPage } from "../pages/admin-page/admin-page";
 import { Header } from "../components/header/header";
 import CmsPage from "../pages/cms-page/cms-page";
+import Article from "../pages/article-page/article-page";
 
 const AppRouter = () => {
   return (
@@ -67,6 +68,20 @@ const AppRouter = () => {
                   <Header />
                   <div style={{ marginTop: "50px" }}>
                     <CmsPage />
+                  </div>
+                </div>
+              </>
+            }
+          />
+
+          <Route
+            path="/article/:id"
+            element={
+              <>
+                <div className="main-container">
+                  <Header />
+                  <div style={{ marginTop: "50px" }}>
+                    <Article />
                   </div>
                 </div>
               </>

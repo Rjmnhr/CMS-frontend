@@ -1,7 +1,7 @@
-import { Button, Modal } from "antd";
+import { Button, Modal, FloatButton } from "antd";
 import { useState } from "react";
 
-import { FolderAddOutlined } from "@ant-design/icons";
+import { PlusOutlined } from "@ant-design/icons";
 import AddContent from "../../add-content/add-content";
 const AddContentModal = () => {
   const [open, setOpen] = useState(false);
@@ -20,8 +20,14 @@ const AddContentModal = () => {
   return (
     <>
       <div type="primary" onClick={showModal}>
-        <FolderAddOutlined />
-        <p>New Content</p>
+        <FloatButton
+          shape="circle"
+          type="primary"
+          style={{
+            right: 50,
+          }}
+          icon={<PlusOutlined />}
+        />
       </div>
       <Modal
         open={open}

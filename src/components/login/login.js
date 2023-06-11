@@ -1,17 +1,31 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./login.css";
 import { useNavigate } from "react-router-dom";
 import { message } from "antd";
+import { LoadingOutlined } from "@ant-design/icons";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const [messageApi, contextHolder] = message.useMessage();
 
   const navigate = useNavigate();
 
+  useEffect(() => {
+    let timeoutId;
+    if (isLoading) {
+      timeoutId = setTimeout(() => {
+        setIsLoading(false);
+        error("Check your internet connection");
+      }, 15000);
+    }
+    return () => clearTimeout(timeoutId);
+  }, [isLoading]);
+
   const handleSubmit = (e) => {
+    setIsLoading(true);
     e.preventDefault();
     fetch("https://backendcms-renjithcmrenju.b4a.run/api/auth/login/", {
       method: "POST",
@@ -20,6 +34,7 @@ export const Login = () => {
     })
       .then((response) => response.json())
       .then((data) => {
+        setIsLoading(false);
         if (typeof data === "string") {
           error(data);
           return;
@@ -98,7 +113,9 @@ export const Login = () => {
             />
           </div>
 
-          <button type="submit">LOGIN</button>
+          <button type="submit">
+            {isLoading ? <LoadingOutlined /> : "LOGIN"}
+          </button>
         </form>
         <p>
           don't have an account?{" "}

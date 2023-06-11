@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "./add-content.css";
 import { message } from "antd";
 import { useApplicationContext } from "../context/app-context";
+import { LoadingOutlined } from "@ant-design/icons";
 
 const AddContent = () => {
   const [title, setTitle] = useState("");
@@ -10,14 +11,21 @@ const AddContent = () => {
   const [image, setImage] = useState(null);
   const [messageApi, contextHolder] = message.useMessage();
   const { setIsContentUpdated } = useApplicationContext();
+  const [isLoading, setIsLoading] = useState(false);
+
+  const userData = JSON.parse(localStorage.getItem("userData"));
+
+  const author = userData.name;
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsLoading(true);
 
     const formData = new FormData();
     formData.append("title", title);
     formData.append("desc", desc);
     formData.append("image", image);
+    formData.append("author", author);
 
     // Upload image
 
@@ -34,7 +42,7 @@ const AddContent = () => {
       .then((response) => {
         console.log(response.data);
         setIsContentUpdated(true);
-
+        setIsLoading(false);
         success();
         setTitle("");
         setDesc("");
@@ -87,7 +95,10 @@ const AddContent = () => {
               />
             </div>
 
-            <button type="submit">Create Post</button>
+            <button type="submit">
+              {" "}
+              {isLoading ? <LoadingOutlined /> : "Create Post"}
+            </button>
           </form>
         </div>
       </div>
